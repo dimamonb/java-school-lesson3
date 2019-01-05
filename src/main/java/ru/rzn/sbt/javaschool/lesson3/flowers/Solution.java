@@ -16,7 +16,12 @@ public class Solution {
      * England, WestBengal, Hungary (именно в таком порядке)
      */
     public static Region[] regions() {
-        return null;
+        Region[] result = new Region[3];
+        result[0] = new England();
+        result[1] = new WestBengal();
+        result[2] = new Hungary();
+
+        return result;
     }
 
 }
