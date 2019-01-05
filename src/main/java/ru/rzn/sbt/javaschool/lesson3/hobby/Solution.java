@@ -11,6 +11,28 @@ public class Solution {
      * Случаи с null-ссылкой на массив и null-элементами массива следует обрабатывать.
      */
     public static DetectionResult detect(Object[] students) {
-        return null;
+
+
+        DetectionResult dr = new DetectionResult();
+        if(students == null) return dr;
+
+        int rstarCount = 0,
+            bikerCount = 0,
+            studentCount = 0;
+
+        for (Object s: students) {
+             if (s == null) continue;
+             if(s instanceof Rockstar){
+                 rstarCount++;
+             } else if(s  instanceof Biker){
+                 bikerCount++;
+             } else {
+                 studentCount++;
+             }
+        }
+        dr.setPureStudentsCount(studentCount);
+        dr.setRockstarsCount(rstarCount);
+        dr.setBikersCount(bikerCount);
+        return dr;
     }
 }
