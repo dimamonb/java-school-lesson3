@@ -39,7 +39,4 @@ public class FrontMan extends Musician{
         return result;
     }
 
-    public void playAndSing(){
-
-    }
 }
